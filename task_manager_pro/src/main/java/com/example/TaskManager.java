@@ -15,7 +15,7 @@ public class TaskManager {
 
     public void listTasks() {
         if (tasks.isEmpty()) {
-            System.out.println("No tasks found.");
+            System.out.println(ConsoleColor.RED + "No tasks found." + ConsoleColor.RESET);
             return;
         }
         for (Task t : tasks) {
@@ -26,9 +26,9 @@ public class TaskManager {
     public void completeTask(int index) {
         if (index >= 0 && index < tasks.size()) {
             tasks.get(index).markAsDone();
-            System.out.println("Task marked as done!");
+            System.out.println(ConsoleColor.GREEN + "Task marked as done!" + ConsoleColor.RESET);
         } else {
-            System.out.println("Invalid task index.");
+            System.out.println(ConsoleColor.RED + "Invalid task index." + ConsoleColor.RESET);
         }
     }
 }

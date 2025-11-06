@@ -29,6 +29,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return (completed ? "[Done] " : "[ ] ") + title + ": " + description;
+        return (completed ? ConsoleColor.GREEN + "[Done] " + ConsoleColor.RESET : "[ ] ") + title + ": " + description;
     }
 }

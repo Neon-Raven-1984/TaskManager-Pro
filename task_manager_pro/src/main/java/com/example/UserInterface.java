@@ -40,10 +40,10 @@ public class UserInterface {
                     manager.completeTask(index - 1);
                     break;
                 case 4:
-                    System.out.println("Goodbye!");
+                    System.out.println(ConsoleColor.YELLOW + "Goodbye!" + ConsoleColor.RESET);
                     return;
                 default:
-                    System.out.println("Invalid choice.");
+                    System.out.println(ConsoleColor.RED + "Invalid choice." + ConsoleColor.RESET);
             }
         }
     }
